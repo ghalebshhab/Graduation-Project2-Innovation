@@ -131,13 +131,13 @@ function App() {
             <div className="detail-card">
               <span className="d-icon">📅</span>
               <div className="d-label">التاريخ</div>
-              <div className="d-value">٢٣ / ٦ / ٢٠٢٦</div>
+              <div className="d-value">23/6/2026</div>
             </div>
 
             <div className="detail-card">
               <span className="d-icon">🕐</span>
               <div className="d-label">الوقت</div>
-              <div className="d-value">١١:٤٠ صباحاً</div>
+              <div className="d-value">11:40 AM</div>
             </div>
           </div>
 
@@ -145,19 +145,20 @@ function App() {
             <div className="loc-icon">⌖</div>
 
             <div>
-              <div className="loc-label">مكان المناقشة</div>
-              <div className="loc-value">
-                كلية تكنولوجيا المعلومات — قاعة ٣٠٢
-              </div>
-            </div>
+  <div className="loc-label">مكان المناقشة</div>
+
+  <div className="loc-value">
+    الجامعة الهاشمية — كلية تكنولوجيا المعلومات — قاعة ٣٠٢
+  </div>
+</div>
           </div>
 
           {/* Zaffeh announcement */}
           <div className="zaffeh-announcement">
-            <div className="zaffeh-icon">🎉</div>
+            <div className="zaffeh-icon">🥁</div>
 
             <div className="zaffeh-content">
-              <div className="zaffeh-title">موعد زفّة شباب</div>
+              <div className="zaffeh-title">موعد زفّة الشباب</div>
 
               <p>
                 يوجد زفّة شباب على الساعة
