@@ -148,7 +148,7 @@ function App() {
   <div className="loc-label">مكان المناقشة</div>
 
   <div className="loc-value">
-    الجامعة الهاشمية — كلية تكنولوجيا المعلومات — قاعة ٣٠٢
+    الجامعة الهاشمية  —  كلية تكنولوجيا المعلومات  —  قاعة 302  
   </div>
 </div>
           </div>
@@ -158,11 +158,11 @@ function App() {
             <div className="zaffeh-icon">🥁</div>
 
             <div className="zaffeh-content">
-              <div className="zaffeh-title">موعد زفّة الشباب</div>
+              <div className="zaffeh-title"> زفّة الشباب</div>
 
               <p>
-                يوجد زفّة شباب على الساعة
-                <span className="zaffeh-time">١:٠٠ ظهراً</span>
+    تكتمل فرحتنا بوجودكم في زفة الخريجين في تمام الساعة 
+                <span className="zaffeh-time">1:00 PM</span>
                 عند <span className="zaffeh-place">بوابة عمّان</span>
               </p>
             </div>
@@ -192,7 +192,7 @@ function App() {
           <div className="footer-text">
             كلية تكنولوجيا المعلومات
             <span className="dot-accent" />
-            فريق JO MAP
+           JO MAP TEAM
           </div>
         </div>
       </section>
