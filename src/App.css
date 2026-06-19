@@ -408,9 +408,9 @@ body {
 
 .zaffeh-public {
   position: absolute;
-  top: 6px;
-  left: 7px;
-  padding: 3px 6px;
+  top: 2px;
+  left: 3px;
+  padding: 3px 4px;
   border: 1px solid rgba(56, 213, 255, 0.22);
   border-radius: 99px;
   background: rgba(56, 213, 255, 0.1);

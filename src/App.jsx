@@ -148,8 +148,12 @@ function App() {
   <div className="loc-label">مكان المناقشة</div>
 
   <div className="loc-value">
-    الجامعة الهاشمية  —  كلية تكنولوجيا المعلومات  —  قاعة 302  
+    الجامعة الهاشمية  —  كلية تكنولوجيا المعلومات  —   
   </div>
+  <div className="loc-value">  
+     قاعة 302
+  </div>
+  
 </div>
           </div>
 
