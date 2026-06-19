@@ -1,5 +1,4 @@
 import "./App.css";
-
 const teamMembers = [
   { name: "عضو الفريق الأول", image: "/images/team-1.jpg", fallback: "1" },
   { name: "عضو الفريق الثاني", image: "/images/team-2.jpg", fallback: "2" },
