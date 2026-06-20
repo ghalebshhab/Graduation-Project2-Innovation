@@ -1,10 +1,11 @@
+import { useState } from "react";
 import "./App.css";
 const teamMembers = [
-  { name: "عضو الفريق الأول", image: "/images/team-1.jpg", fallback: "1" },
-  { name: "عضو الفريق الثاني", image: "/images/team-2.jpg", fallback: "2" },
-  { name: "عضو الفريق الثالث", image: "/images/team-3.jpg", fallback: "3" },
-  { name: "عضو الفريق الرابع", image: "/images/team-4.jpg", fallback: "4" },
-  { name: "عضو الفريق الخامس", image: "/images/team-5.jpg", fallback: "5" },
+  { name: "Ghaleb", fullName: "Ghaleb Shehab", image: "/images/team-1.jpg", fallback: "G" },
+  { name: "Mousab", fullName: "Mousab Makahleh", image: "/images/team-2.jpg", fallback: "M" },
+  { name: "Ziad", fullName: "Ziad Qafisheh", image: "/images/team-3.jpg", fallback: "Z" },
+  { name: "Abdalqader", fullName: "Abdalqader Froukh", image: "/images/team-4.jpg", fallback: "A" },
+  { name: "Eyad", fullName: "Eyad Abufares", image: "/images/team-5.jpg", fallback: "E" },
 ];
 
 function JordanMap() {
@@ -77,6 +78,8 @@ function GraduationHat() {
 }
 
 function App() {
+  const [selectedMember, setSelectedMember] = useState(null);
+
   return (
     <main className="invite-wrap" dir="rtl">
       <section className="invite-card">
@@ -179,15 +182,23 @@ function App() {
 
           <div className="avatars">
             {teamMembers.map((member) => (
-              <div className="av" key={member.image} title={member.name}>
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  onError={(event) => {
-                    event.currentTarget.style.display = "none";
-                  }}
-                />
-                <span>{member.fallback}</span>
+              <div 
+                className="av-container" 
+                key={member.image}
+                onClick={() => setSelectedMember(member)}
+                style={{ cursor: "pointer" }}
+              >
+                <div className="av" title={member.name}>
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    onError={(event) => {
+                      event.currentTarget.style.display = "none";
+                    }}
+                  />
+                  <span>{member.fallback}</span>
+                </div>
+                <div className="av-name">{member.name}</div>
               </div>
             ))}
           </div>
@@ -199,6 +210,16 @@ function App() {
           </div>
         </div>
       </section>
+
+      {selectedMember && (
+        <div className="modal-overlay" onClick={() => setSelectedMember(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-btn" onClick={() => setSelectedMember(null)}>&times;</button>
+            <img src={selectedMember.image} alt={selectedMember.fullName} className="modal-image" />
+            <h2 className="modal-name">{selectedMember.fullName}</h2>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
